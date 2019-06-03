@@ -1,6 +1,8 @@
-## Proyecto-TPIntegrador
+# Proyecto-TPIntegrador
 
-# Introducción
+## Alumnos: Otero Facundo y Nardoni Valentin 
+
+## Introducción
 
 Este documento corresponde a la propuesta de proyecto final para la materia “Programación en Ambiente Web”.
 El sitio consiste en una página web para el dueño de una quinta la utiliza en forma de alquiler para
@@ -10,7 +12,7 @@ alquiler puedan enterarse de todo lo que se ofrece.
 El dueño podrá administrar las reservas que se realizan por el sitio, pudiendo asítener un control
 de ellas y así también, los visitantes, observar los días disponibles que se encuentran.
 
-# Secciones
+## Secciones
 
 El sitio tendrá su Home principal, donde se visualiza principalmente un carrete con algunas
 imágenes principales de la quinta, información principal que el usuario desearía saber.
@@ -28,7 +30,7 @@ disponible, como los días en la quinta ha sido alquilada, donde cualquier usuari
 visualizar. Junto a esto, habrá campos para llenar en caso de querer pedir un presupuesto, en caso
 de querer pedir un presupuesto el usuario debe estar registrado y logueado en el sitio.
 
-# Usuarios
+## Usuarios
 
 El Sistema permitirá los siguientes modos de usuario:
 Modo Invitado: Cualquier usuario que ingrese al sitio estará en este modo, que le permitirá
@@ -41,7 +43,7 @@ manejar los pedidos de presupuesto que le llegan, pudiendo dejar le presupuesto 
 alguna o asignarlo como evento.
 
 
-# Sobre el funcionamiento
+## Sobre el funcionamiento
 
 Los presupuestos solicitados por usuarios logueados, quedan registrados en el sistema, luego de
 acordar con el dueño y confirmar la reserva, este ultimo acepta el presupuesto registrándolo como
