@@ -1,3 +1,173 @@
-body {
-    background: #999;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Lato|Saira+Semi+Condensed|Source+Sans+Pro|Roboto|Titillium+Web&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    margin-top: 4.3%;
+}
+
+nav{
+    padding: 8px;
+}
+
+.logo{
+    float: left;
+    margin-left: 16px;
+}
+
+.logo img {
+    position: relative;
+    top: 9px;
+    width: 30px;
+    height: 30px;
+}
+
+.logo a{    
+    font-family: Titillium Web;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+.logo p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: -7px;
+}
+
+.container-main {
+    width: 100%;
+    margin-top: 10%;
+   
+    display: block;
+}
+
+.container-main h5 {
+    font-size: 27.5px;
+    font-family: Lato;
+    text-align: center;
+}
+
+.nav-menu  {
+    display:inline-block;
+    float: right;
+}
+
+.nav-wrapper {
+    display: flex;
+}
+
+.nav-login {
+    display: flex;
+    float: right;
+}
+
+.nav-login ul {
+    margin-top: -5px;
+}
+
+nav ul{
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+    float: left;
+}
+
+nav ul li:not(:first-child){
+    margin-left: 48px;
+}
+
+nav ul li:last-child{
+    margin-right: 24px;
+}
+
+nav ul li a{
+    font-family: Lato;
+    display: inline-block;
+    outline: none;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+
+
+
+/* CSS MAIN */
+
+.container-form {
+    width: 100%;
+}
+
+.container-form h2 {
+    text-align: center;
+}
+
+/* CSS PAGE TITTLE */
+
+
+.page-tittle {
+    width: 100%;
+    background: #eee;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 0;
+}
+
+.page-tittle-container {
+    display: flex;
+    padding-right: 45px;
+    padding-left: 45px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-tittle-route {
+    width: 50%;
+    font-family: "Open Sans";
+    text-align: right;  
+    line-height: 24px;
+    font-weight: normal;
+    font-style: normal;
+    color: #7e8082;
+    font-size: 11px;
+}
+
+.page-tittle-route ul {
+    margin-top: 5px;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+
+.page-tittle-route a {
+    text-decoration: none;
+    color: #7e8082;
+}
+
+.page-tittle-route li {
+    margin: 0;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.page-tittle-text {
+    width: 50%;
+    font-family: Lato;
+    text-align: left;
+    line-height: 15px;
+    color: #4b4e53;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin: 0;
 }

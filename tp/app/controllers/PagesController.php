@@ -11,7 +11,30 @@ class PagesController
     {
         return view('index');
     }
-
+    
+    /**
+     * Show the login page.
+     */
+    public function loginView()
+    {
+        return view('login');
+    }
+    
+    
+    /* Show the login page.*/
+    
+    public function presupuesto()
+    {
+        return view('presupuesto');
+    }
+    
+    /* Show the login page.*/
+    
+    public function galeria()
+    {
+        return view('galeria');
+    }
+    
     /**
      * Show the about page.
      */

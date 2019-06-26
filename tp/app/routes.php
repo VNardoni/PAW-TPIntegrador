@@ -3,8 +3,11 @@
     $router->get('', 'PagesController@home');
     $router->get('about', 'PagesController@about');
     $router->get('contact', 'PagesController@contact');
-
-    $router->get('users', 'UsersController@index');
+    $router->get('login', 'PagesController@loginView');
+    $router->get('presupuesto', 'PagesController@presupuesto');
+    $router->get('galeria', 'PagesController@galeria');
+    
+        $router->get('users', 'UsersController@index');
     $router->post('users', 'UsersController@store');
 
     $router->get('tasks', 'TasksController@index');
