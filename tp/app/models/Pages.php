@@ -13,7 +13,7 @@ protected $tablePresupuesto='presupuesto';
 public function getEventos(){
     
     $evento = $this->db->getEventos($this->tableEventos);
-    var_dump($evento);
+    
     $misEventos = json_decode(json_encode($evento), True);
     return $misEventos;
 }

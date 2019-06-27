@@ -44,7 +44,7 @@ public function vistaUsuario(){
       
       public function validarUsuario(){
        //verifico si existe el usuario
-        echo "aca";
+        
           $statement= $this->model->buscarUsuario($_POST['nombre']);      
     if(empty($statement)){
         $usuario = [
