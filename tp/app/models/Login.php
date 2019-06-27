@@ -13,7 +13,7 @@ class login extends Model{
     }
 
     public function getUsuario($nombreUsuario){
-        return $this->db->buscarUsuario($tthis->table,$nombreUsuario);
+        return $this->db->buscarUsuario($this->table,$nombreUsuario);
     }
     
 

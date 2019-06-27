@@ -18,4 +18,21 @@
     $router->get('internal_error', 'ProjectController@internalError');
 
 
+//rutas de registro
+
+$router->get('register', 'PagesController@vistaRegister');
+  $router->post('usuarios/validarUsuario','UsersController@validarUsuario');
+$router->get('cerrarSesion', 'PagesController@cerrarSesion');
 $router->post('Login/validar', 'loginController@validarLogin');
+
+$router->get('solicitudes', 'PagesController@vistaAdmin');
+
+
+//rutas presupuestos
+
+$router->post('presupuesto/validarPresupuesto','PresupuestoController@validarPresupuesto');
+$router->get('presupuesto/modificar', 'PresupuestoController@updateEstado');
+
+
+
+

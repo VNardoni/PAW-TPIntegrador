@@ -10,7 +10,12 @@
             <div class="nav-wrapper">
                 <ul>
                     <li><a href="/">HOME</a></li>
+                       
+                    {% if datos.userLogueado == "admin" %}
+                    <li><a href="/solicitudes">PRESUPUESTOS</a></li>
+                    {% else %}
                     <li><a href="/presupuesto">PRESUPUESTO</a></li>
+                    {% endif %}
                     <li><a href="/eventos">EVENTOS</a></li>
                     <li><a href="/galeria">GALERIA</a></li>
                     <li><a href="/contact">CONTACTO</a></li>
@@ -22,6 +27,11 @@
                     <li><a href="/login">LOGIN</a></li>
                     <li><a href="/register">REGISTER</a></li>
                 </ul>
+            <li>
+            <p class="user">{{ datos.userLogueado }} |<a href="/cerrarSesion">Cerrar sesion</a></p>
+        </li>
+
+            
             </div>
             </div>
         </nav>

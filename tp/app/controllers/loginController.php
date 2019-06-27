@@ -21,13 +21,14 @@ class loginController extends Controller{
         echo '<script language="javascript">';
         echo 'alert("Usuario o Contraseña Incorrecta")';
         echo '</script>';
-        return view ('index');
+        return view ('login');
      }else{
          session_start();
          $_SESSION['user']=$_POST['nombre'];
          $datos['userLogueado'] = $_SESSION['user'];
-        return view ('index.home',compact('datos'));
+        
+        return view('index',compact('datos')); 
+        //return view ('index',compact('datos'));
         }       
     }
 }
-

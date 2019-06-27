@@ -1,23 +1,35 @@
 <?php
 
 namespace App\Controllers;
-
+use App\Models\pages;
 class PagesController
 {
-    /**
-     * Show the home page.
+    public function __construct(){
+        $this->model = new Pages();
+        } 
+     /* Show the home page.
      */
     public function home()
-    {
-        return view('index');
+    { 
+        if(empty($_SESSION)){
+        
+            return view('index');
+        } else {
+           
+        $datos['userLogueado'] = $_SESSION['user'];
+      
+        
+            return view ('index',compact('datos'));
+        
     }
-    
+    }
     /**
      * Show the login page.
      */
     public function loginView()
-    {
-        return view('login');
+    {$datos['userLogueado'] = $_SESSION['user'];
+     
+     return view('login',compact('datos'));
     }
     
     
@@ -25,7 +37,11 @@ class PagesController
     
     public function presupuesto()
     {
-        return view('presupuesto');
+        $todosEventos=$this->model->getEventos();
+         $datos["diaHoy"] = date("Y-m-d");
+        //$datos["userLogueado"] = $_SESION['user'];
+        
+        return view('presupuesto',compact('todosEventos'));
     }
     
     /* Show the login page.*/
@@ -52,4 +68,21 @@ class PagesController
     {
         return view('contact');
     }
+  public function cerrarSesion(){
+        session_unset();
+        session_destroy();
+        redirect('');
+    }
+public function vistaRegister(){
+     
+    return view('register');
 }
+    
+    
+public function  vistaAdmin(){
+    $todosPresupuestos=$this->model->getPresupuestos();
+    return view ('solicitudes',compact('todosPresupuestos'));
+}
+
+}
+        

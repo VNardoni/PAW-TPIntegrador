@@ -5,8 +5,10 @@
 {% endblock %} 
 
 {% block header %}
-    {{ include('partials/nav.html') }}
-{% endblock %}
+{% include 'partials/nav.html' with {datos:datos} only %}
+
+    
+    {% endblock %}
 
 {% block head %} 
 {{ parent() }}

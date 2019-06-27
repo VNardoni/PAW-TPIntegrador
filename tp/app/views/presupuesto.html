@@ -26,6 +26,38 @@
             </div>
         </div>    
     </div>
+
+ <form action="/presupuesto/validarPresupuesto" method="post" id="formAlta">
+                        
+                            
+        <label for="mensaje" class="label">mensaje:</label>
+        
+        <input type="textArea" name="mensaje" class="form" autofocus required>
+    
+      <label for="fechaInicio">Fecha Inicio</label>
+       <input type="date" name="fechaInicio" value="{{ datos.diaHoy }}" min="{{ datos.diaHoy }}" required><br>
+            
+
+          <label for="fechaFin">Fecha Fin</label>
+            <input type="date" name="fechaFin" min="{{ datos.diaHoy }}" required><br>
+         
+    <label for="cantidadInvitados" class="label">Cantidad Invitados:</label>
+        <input type="number" name="cantidadInvitados" class="form" autofocus required>
+        
+ <select name="nombreEvento" class="form-control custom-select" required>
+<option selected>Seleccione el tipo de Evento</option>
+            {% for evento in todosEventos %}
+<option value={{ evento.nombreEvento }}>{{ evento.nombreEvento }}</option>
+                                {% endfor %}
+                            </select>
+        
+        
+        <input type="submit" value="Pedir Presupuesto">
+    
+    </form>
+
+
+
 {% endblock %}
 
 {% block footer %}

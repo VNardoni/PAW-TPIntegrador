@@ -44,7 +44,8 @@ class QueryBuilder
      * @param  array  $parameters
      */
     public function insert($table, $parameters)
-    {
+    { echo "empiezaa   ";
+        var_dump($parameters);
         $parameters = $this->cleanParameterName($parameters);
         $sql = sprintf(
             'insert into %s (%s) values (%s)',
@@ -99,5 +100,22 @@ public function comparaUsuario($table, $usuario ){  $statement = $this->pdo->pre
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+ 
+
+
+  public function getEventos($tableEvento){ 
+        $statement = $this->pdo->prepare(
+           "SELECT nombreEvento FROM $tableEvento"
+    );
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+public function updatePresupuesto($tabla,$estado,$id){
+        $statement = $this->pdo->prepare(
+            "UPDATE $tabla SET estado='$estado' WHERE idPresupuesto=$id"
+        );
+        $statement->execute();
+        }
+
 
 }

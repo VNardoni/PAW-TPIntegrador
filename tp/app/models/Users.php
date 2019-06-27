@@ -13,8 +13,18 @@ class Users extends Model
         return $this->db->selectAll($this->table);
     }
 
-    public function insert(array $user)
-    {
-        $this->db->insert($this->table, $user);
+    public function insert(array $usuario)
+    { echo "llll";
+        var_dump($usuario);
+        $this->db->insert($this->table, $usuario);
     }
+
+public function buscarUsuario($user){
+       //comparo si existe el nombre de usuario 
+    var_dump($user);   
+    return $this->db->comparaUsuario($this->table,$user);
+    }
+
+
+
 }
