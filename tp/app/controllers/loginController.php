@@ -26,7 +26,7 @@ class loginController extends Controller{
          session_start();
          $_SESSION['user']=$_POST['nombre'];
          $datos['userLogueado'] = $_SESSION['user'];
-        
+        $datos['logueado']="true";
         return view('index',compact('datos')); 
         //return view ('index',compact('datos'));
         }       

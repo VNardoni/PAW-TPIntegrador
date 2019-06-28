@@ -6,7 +6,8 @@ class PagesController
 {
     public function __construct(){
         $this->model = new Pages();
-        } 
+    session_start();    
+    } 
      /* Show the home page.
      */
     public function home()
@@ -27,7 +28,8 @@ class PagesController
      * Show the login page.
      */
     public function loginView()
-    {$datos['userLogueado'] = $_SESSION['user'];
+    {
+        //$datos['userLogueado'] = $_SESSION['user'];
      
      return view('login',compact('datos'));
     }

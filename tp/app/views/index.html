@@ -12,11 +12,28 @@
 
 {% block head %} 
 {{ parent() }}
-   
+    <link rel="stylesheet" href="/public/css/carrusel.css">
 {% endblock %} 
 
 {% block main %}
     <h1>HOME</h1>
+ <div class="content-all">
+        <div class="content-carrousel">
+            <figure><img src="/app/views/imagenes/galeria/23.jpg"></figure>
+            <figure><img src="/app/views/imagenes/galeria/20.jpg"></figure>
+            <figure><img src="/app/views/imagenes/galeria/19.jpg"></figure>
+            <figure><img src="/app/views/imagenes/galeria/18.jpg"></figure>
+            <figure><img src="/app/views/imagenes/galeria/17.jpg"></figure>
+            <figure><img src="/app/views/imagenes/galeria/16.jpg"></figure>
+            <figure><img src="/app/views/imagenes/galeria/22.jpg"></figure>
+            <figure><img src="/app/views/imagenes/galeria/24.jpg"></figure>
+            <figure><img src="/app/views/imagenes/galeria/21.jpg"></figure>
+            <figure><img src="/app/views/imagenes/galeria/25.jpg"></figure>
+        </div>
+    </div>
+<br>
+<br>
+<br>
 {% endblock %}
 
 {% block footer %}
