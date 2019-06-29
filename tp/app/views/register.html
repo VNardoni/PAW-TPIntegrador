@@ -12,7 +12,7 @@
 
 {% block head %} 
 {{ parent() }}
-   
+   <link rel="stylesheet" href="/public/css/formularios.css">
 {% endblock %} 
 
 {% block main %}
@@ -21,11 +21,12 @@
                        
         <form action="/usuarios/validarUsuario" method="post" id="formAlta">
                         
-                            
+                       
         <label for="nombre" class="label">Nombre(nick):</label>
         <input type="text" name="nombre" class="form" autofocus required>
     <label for="password" class="label">Password:</label>
       <input type="password" name="password" class="form" autofocus required>
+       <br>
        <label for="nombrePersona" class="label">Nombre:</label>
       
          <input type="text" name="nombrePersona" class="form" autofocus required>

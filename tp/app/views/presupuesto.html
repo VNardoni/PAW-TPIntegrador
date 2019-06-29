@@ -9,6 +9,7 @@
 {% block head %}
     {{ parent() }}
     <meta name="keywords" content="PAW,2018,Templates,PHP">
+  <link rel="stylesheet" href="/public/css/formularios.css">
 {% endblock %}
 
 {% block main %}
@@ -30,11 +31,11 @@
  <form action="/presupuesto/validarPresupuesto" method="post" id="formAlta">
                         
                             
-        <label for="mensaje" class="label">mensaje:</label>
+        <label for="mensaje" class="label">Mensaje:</label>
         
         <!--<input type="textarea" rows="5" cols="30"  name="mensaje" class="form" autofocus required>-->
     <textarea name="mensaje" rows="10" cols="50"></textarea>
-      <label for="fechaInicio">Fecha Inicio</label>
+<br>      <label for="fechaInicio">Fecha Inicio</label>
        <input type="date" name="fechaInicio" value="{{ datos.diaHoy }}" min="{{ datos.diaHoy }}" required><br>
             
 
