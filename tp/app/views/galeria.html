@@ -3,7 +3,7 @@
 {% block title %}Galeria{% endblock %}
 
 {% block header %}
-    {{ include('partials/nav.html') }}
+{% include 'partials/nav.html' with {datos:datos} only %}
 {% endblock %}
 
 {% block head %}
@@ -30,7 +30,7 @@
     <br>
     
     <div class="contenedor-galeria">
-       <img src="/app/views/imagenes/galeria/25.jpg" class="galeria__img" >
+      <!-- <img src="/app/views/imagenes/galeria/25.jpg" class="galeria__img" >
         <img src="/app/views/imagenes/galeria/24.jpg" class="galeria__img" >
         <img src="/app/views/imagenes/galeria/23.jpg" class="galeria__img" >
         <img src="/app/views/imagenes/galeria/22.jpg" class="galeria__img">
@@ -54,8 +54,46 @@
         <img src="/app/views/imagenes/galeria/4.jpg" class="galeria__img" >
         <img src="/app/views/imagenes/galeria/3.jpg" class="galeria__img" >
         <img src="/app/views/imagenes/galeria/2.jpg/" class="galeria__img" >
-     
+      
+      <?php
+    $directory="img";
+    $dirint = dir($directory);
+    while (($archivo = $dirint->read()) !== false)
+    {
+        if (eregi("gif", $archivo) || eregi("jpg", $archivo) || eregi("png", $archivo)){
+            echo '<img src="'.$directory."/".$archivo.'">'."\n";
+        }
+    }
+    $dirint->close();
+?>  
+-->
+<!--{% set directory='img' %}-->
+
+
+<!--{% for i in 0..10 %} 
+<img src="app/views/imagenes/galeria/20.jpg"/>
+
+{% endfor %}-->
+<script>
+    let n = 3; //numero de imagenes
+    let imagenes = document.getElementById('fotos2') ;
+    for (let i = 1; i<= n; i++){
+    imagenes.innerHTML += '<img class="tfoto" src="app/views/imagenes/galeria/'+ i +'.jpg"><br>';
+    }
+    </script>   
+{% set i=0 %}
+<div class="contenedor-galeria" >
         
+            {% for dato in imagenes %}
+{% set i=i+1 %}
+
+<img src={{ dato.imagen }} id={{i}} alt="Imagen de diagnostico" class="galeria__img"/>
+<!--<input type="submit" value="borrar" class="boton" id="boton" onclick="borrar( document.getElementById('{{i}}').id,document.getElementById('{{i}}').src)">-->
+
+{% endfor %}
+
+   </div>
+
     </div>
     
     

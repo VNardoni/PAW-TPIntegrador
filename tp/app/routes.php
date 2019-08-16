@@ -6,7 +6,7 @@
     $router->get('login', 'PagesController@loginView');
     $router->get('presupuesto', 'PagesController@presupuesto');
     $router->get('galeria', 'PagesController@galeria');
-    
+    $router->get('adminGaleria', 'PagesController@admingaleria');
         $router->get('users', 'UsersController@index');
     $router->post('users', 'UsersController@store');
 
@@ -35,4 +35,7 @@ $router->get('presupuesto/modificar', 'PresupuestoController@updateEstado');
 
 
 
+//rutas de galeria
+$router->post('imagen/validar','PagesController@validarImagenes');
+$router->post('eliminar/imagen','PagesController@eliminarImagenes');
 

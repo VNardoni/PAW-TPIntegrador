@@ -44,8 +44,7 @@ class QueryBuilder
      * @param  array  $parameters
      */
     public function insert($table, $parameters)
-    { echo "empiezaa   ";
-        var_dump($parameters);
+    { 
         $parameters = $this->cleanParameterName($parameters);
         $sql = sprintf(
             'insert into %s (%s) values (%s)',
@@ -117,5 +116,25 @@ public function updatePresupuesto($tabla,$estado,$id){
         $statement->execute();
         }
 
+        public function insertarImagen($tabla,$archi,$dir){
+            $statement = $this->pdo->prepare(
+            "INSERT INTO $tabla(archivo,directorio) VALUES ('$archi','$dir')"
+        );
+            $statement->execute();
+        }
+        public function insertImagen($tabla,$ruta){
+            $statement = $this->pdo->prepare(
+                "INSERT INTO $tabla(imagen) VALUES ('$ruta')"
+            );
+                $statement->execute();
+        }
+       public function dameImg($tabla){
+        $statement = $this->pdo->prepare(
+            "SELECT imagen FROM $tabla"
+        );
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+   
+    }
 
-}

@@ -7,7 +7,8 @@ class PresupuestoController
     public function __construct(){
         $this->model = new Presupuesto();
          session_start();
-    } 
+       
+        } 
 
 
  public function validarPresupuesto(){
@@ -26,13 +27,16 @@ class PresupuestoController
         ];
        //$presupuesto['nombre']=$_SESSION['user'];
         $this->model->guardar($presupuesto);
-        return view('index');
+        $datos['userLogueado'] = $_SESSION['user'];
+        return view('index','datos');
 
     }       
 
 
 public function vistaPresupuesto(){
-    return view('presupuesto');
+   
+    $datos['userLogueado'] = $_SESSION['user'];
+    return view('presupuesto','datos');
     
     
 }
@@ -44,8 +48,8 @@ public function updateEstado(){
 $this->model->actualizarEstado($estado,$id);
 $todosPresupuestos=$this->model->getPresupuestos();    
     
-    
-    return view('solicitudes',compact('todosPresupuestos'));
+$datos['userLogueado'] = $_SESSION['user'];
+    return view('solicitudes',compact('todosPresupuestos','datos'));
 }
 
 }
